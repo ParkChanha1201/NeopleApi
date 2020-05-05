@@ -1,15 +1,11 @@
 package aktnf.neopleapi.cyphers.players;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-
-import org.json.JSONObject;
 
 import aktnf.neopleapi.WordType;
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
-import aktnf.util.HttpRequester;
 
 public class CyphersApiPlayerId extends ApiRequestDecorator{
 	private CyphersApiRequest apiRequest; 
@@ -71,19 +67,5 @@ public class CyphersApiPlayerId extends ApiRequestDecorator{
 		sb.append("&apikey=" + apikey);
 		
 		return sb.toString();
-	}
-	
-	@Override
-	public JSONObject getRawData(){
-		String requestURL = getRequestURL();
-		
-		try {
-			HttpRequester.isURLAvailable(requestURL);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return null;
 	}
 }
