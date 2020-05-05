@@ -14,7 +14,6 @@ import aktnf.neopleapi.cyphers.ranking.TSJType;
 
 public class TestApp {
 	public static void main(String[] args) {
-
 		String apikey;
 		
 		try {
