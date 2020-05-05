@@ -1,7 +1,5 @@
 package aktnf.neopleapi.cyphers.positionattributes;
 
-import org.json.JSONObject;
-
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
 
@@ -26,11 +24,5 @@ public class CyphersPositionAttributeDetail extends ApiRequestDecorator {
 		sb.append(apikey);
 		
 		return sb.toString();
-	}
-
-	@Override
-	public JSONObject getRawData() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

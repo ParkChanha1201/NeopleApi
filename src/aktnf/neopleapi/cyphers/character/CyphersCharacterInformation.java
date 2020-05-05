@@ -1,7 +1,5 @@
 package aktnf.neopleapi.cyphers.character;
 
-import org.json.JSONObject;
-
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
 
@@ -27,13 +25,4 @@ public class CyphersCharacterInformation extends ApiRequestDecorator{
 		
 		return sb.toString();
 	}
-
-	@Override
-	public JSONObject getRawData() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	
-	
 }
