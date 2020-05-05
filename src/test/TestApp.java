@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import neopleapi.WordType;
-import neopleapi.cyphers.CyphersApiRequester;
-import neopleapi.cyphers.GameTypeId;
-import neopleapi.cyphers.character.CyphersCharacterIds;
-import neopleapi.cyphers.character.CyphersCharacterName;
-import neopleapi.cyphers.ranking.RankingType;
-import neopleapi.cyphers.ranking.TSJType;
+import aktnf.neopleapi.WordType;
+import aktnf.neopleapi.cyphers.CyphersApiRequester;
+import aktnf.neopleapi.cyphers.GameTypeId;
+import aktnf.neopleapi.cyphers.character.CyphersCharacterIds;
+import aktnf.neopleapi.cyphers.character.CyphersCharacterName;
+import aktnf.neopleapi.cyphers.ranking.RankingType;
+import aktnf.neopleapi.cyphers.ranking.TSJType;
 
 public class TestApp {
 	public static void main(String[] args) {
