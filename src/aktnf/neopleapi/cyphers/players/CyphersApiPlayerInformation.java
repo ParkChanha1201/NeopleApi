@@ -47,14 +47,14 @@ public class CyphersApiPlayerInformation extends ApiRequestDecorator {
 		JSONObject rating = records.getJSONObject(0);
 		JSONObject normal = records.getJSONObject(1);
 
-		MatchRecord ratingRecord = new MatchRecord("rating");
+		Record ratingRecord = new Record("rating");
 		ratingRecord.setWinCount(rating.getInt("winCount"));
 		ratingRecord.setLoseCount(rating.getInt("loseCount"));
 		ratingRecord.setStopCount(rating.getInt("stopCount"));
 
 		playerInformation.setRating(ratingRecord);
 
-		MatchRecord normalRecord = new MatchRecord("normal");
+		Record normalRecord = new Record("normal");
 		normalRecord.setWinCount(normal.getInt("winCount"));
 		normalRecord.setLoseCount(normal.getInt("loseCount"));
 		normalRecord.setStopCount(normal.getInt("stopCount"));

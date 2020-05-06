@@ -6,14 +6,14 @@ public class PlayerInformation {
 	private int ratingPoint;
 	private int maxRatingPoint;
 	private String tierName;
-	private MatchRecord rating;
-	private MatchRecord normal;
+	private Record rating;
+	private Record normal;
 
 	public PlayerInformation() {
 	}
 	
 	public PlayerInformation(Player player, String clanName, int ratingPoint, int maxRatingPoint, String tierName,
-			MatchRecord rating, MatchRecord normal) {
+			Record rating, Record normal) {
 		this.player = player;
 		this.clanName = clanName;
 		this.ratingPoint = ratingPoint;
@@ -63,19 +63,19 @@ public class PlayerInformation {
 		this.tierName = tierName;
 	}
 
-	public MatchRecord getRating() {
+	public Record getRating() {
 		return rating;
 	}
 
-	public void setRating(MatchRecord rating) {
+	public void setRating(Record rating) {
 		this.rating = rating;
 	}
 
-	public MatchRecord getNormal() {
+	public Record getNormal() {
 		return normal;
 	}
 
-	public void setNormal(MatchRecord normal) {
+	public void setNormal(Record normal) {
 		this.normal = normal;
 	}
 }

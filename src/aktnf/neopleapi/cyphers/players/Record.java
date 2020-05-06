@@ -1,16 +1,16 @@
 package aktnf.neopleapi.cyphers.players;
 
-public class MatchRecord {
+public class Record {
 	private String gameType;
 	private int winCount;
 	private int loseCount;
 	private int stopCount;
 	
-	public MatchRecord(String gameType) {
+	public Record(String gameType) {
 		this.gameType = gameType;
 	}
 	
-	public MatchRecord(String gameType, int winCount, int loseCount, int stopCount) {
+	public Record(String gameType, int winCount, int loseCount, int stopCount) {
 		this.gameType = gameType;
 		this.winCount = winCount;
 		this.loseCount = loseCount;
