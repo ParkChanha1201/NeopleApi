@@ -9,6 +9,10 @@ import org.json.JSONObject;
 import aktnf.util.HttpRequester;
 
 public abstract class ApiRequestDecorator {
+	/***
+	 * 
+	 * @return request URL
+	 */
 	public abstract String getRequestURL();
 
 	/***

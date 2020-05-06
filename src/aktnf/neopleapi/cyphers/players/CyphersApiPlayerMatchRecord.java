@@ -5,7 +5,6 @@ import java.util.Date;
 
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
-import aktnf.neopleapi.cyphers.GameTypeId;
 
 public class CyphersApiPlayerMatchRecord extends ApiRequestDecorator {
 	private CyphersApiRequest apiRequest;

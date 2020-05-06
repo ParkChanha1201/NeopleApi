@@ -3,14 +3,17 @@ package test;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.json.JSONObject;
 
 import aktnf.neopleapi.WordType;
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequester;
-import aktnf.neopleapi.cyphers.GameTypeId;
 import aktnf.neopleapi.cyphers.character.CyphersCharacterName;
+import aktnf.neopleapi.cyphers.players.GameTypeId;
+import aktnf.neopleapi.cyphers.players.Player;
+import aktnf.neopleapi.cyphers.players.PlayerInformation;
 import aktnf.neopleapi.cyphers.ranking.RankingType;
 import aktnf.neopleapi.cyphers.ranking.TSJType;
 
@@ -31,16 +34,26 @@ public class TestApp {
 		String requestURL;
 		ApiRequestDecorator request;
 		
-		request = cy.players().playerId("시계").wordType(WordType.MATCH);
+		request = cy.players().playerId("aaa").wordType(WordType.FULL);
 		requestURL = request.getRequestURL();
 		JSONObject rawData = request.getRawData();
 		System.out.println(rawData.toString());
 
+		List<Player> players = cy.players().playerId("aaa").wordType(WordType.FULL).getPlayerList();
+		for(Player player : players) {
+			System.out.println(player.getGrade() + "\n" + player.getNickname()  + "\n" + player.getPlayerId() + "\n");
+		}
+		
 		request = cy.players().information("aabb1b8abd435a707aec8c995e6cfcb4");
 		requestURL = request.getRequestURL();
 		rawData = request.getRawData();
 		System.out.println(rawData);
 
+		PlayerInformation playerInformation = cy.players().information("aabb1b8abd435a707aec8c995e6cfcb4").getPlayerInformation();
+		System.out.println(playerInformation);
+
+		
+		
 		request = cy.players().matchRecords("aabb1b8abd435a707aec8c995e6cfcb4").gameTypeId(GameTypeId.NORMAL)
 				.next("6a48416bd03e7ec11f4b00fddce03b4bd383cc72a40cc52818f168f89897ffa566603d485d0161f1e8e86e14dddc9f7bb6a5ebaa7994822cd5777dcee5ae9ab2134f902a36a666401a9e7f5665d452aa");
 		requestURL = request.getRequestURL();
