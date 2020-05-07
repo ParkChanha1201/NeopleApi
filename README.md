@@ -108,7 +108,7 @@ getRawData()는 getRequestURL()로 부터 얻은 URL으로 요청을 보내 응�
 ```
 * 실행 결과
 ```
-requestURL: https://api.neople.co.kr/cy/ranking/characters/47a1b002f3c601f37cdca060b94a0141/exp?&apikey=L4o9uUDVSbgKEUYcRwq8hQIvOPCaVIj8
+requestURL: https://api.neople.co.kr/cy/ranking/characters/47a1b002f3c601f37cdca060b94a0141/exp?&apikey=XXXXXXXXXXXXXXXXXXXXXX
 
 rawData:
 {
