@@ -106,3 +106,23 @@ getRawData()는 getRequestURL()로 부터 얻은 URL으로 요청을 보내 응�
   String requestURL = request.getRequestURL();
   JSONObject rawData = request.getRawData();
 ```
+* 실행 결과
+```
+requestURL: https://api.neople.co.kr/cy/ranking/characters/47a1b002f3c601f37cdca060b94a0141/exp?&apikey=L4o9uUDVSbgKEUYcRwq8hQIvOPCaVIj8
+
+rawData:
+{
+"rows":[
+{"nickname":"야미쉘","rank":1,"exp":2178230,"playerId":"8d5c79357fa69be6f4927deba781b194"},
+{"nickname":"가리워진꿈","rank":2,"exp":1964450,"playerId":"33658f99124fe3e8d09a2c1ec7f7b746"},
+{"nickname":"다다모","rank":3,"exp":1783647,"playerId":"d297c373990235db83e0d459006fc037"},
+{"nickname":"ㅿ루펠루스ㅿ","rank":4,"exp":1724254,"playerId":"3c0b374e9ce31d05e309dbb48cdf6909"},
+{"nickname":"개졑","rank":5,"exp":1703679,"playerId":"d93ffcab7435e2d1a4914cb534d06759"},
+{"nickname":"비요소","rank":6,"exp":1366944,"playerId":"ac51e04ad61bb4f8926fe99289ab95a2"},
+{"nickname":"유리테","rank":7,"exp":1212854,"playerId":"cc4c9df58e3547dbc0a848960180519f"},
+{"nickname":"리운댕","rank":8,"exp":1157131,"playerId":"2798f66defd3d34ba0e61803ac8aed35"},
+{"nickname":"레몬라임맛미쉘","rank":9,"exp":1112988,"playerId":"22e64ab00840a384d1c85d751898b447"},
+{"nickname":"미나즈키루이","rank":10,"exp":1095983,"playerId":"64ee26875e9142e6ac1642fc2f8f66e0"}
+]
+}
+```
