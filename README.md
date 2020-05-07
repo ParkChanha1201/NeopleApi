@@ -22,7 +22,7 @@
 2. CyphersApiRequester를 사용해 원하는 ApiRequestDecorator를 생성합니다.
 
 각 메서드들은 ApiRequestDecorator를 반환합니다.</br>
-첫 줄까지는 필수 파라미터이므로 반드시 입력해야하고 그 아랫 줄은 선택 사항입니다.
+첫 줄까지는 필수 파라미터이므로 반드시 입력해야하고 그 아랫 줄은 선택 사항입니다.</br>
 파라미터에 대한 설명은 https://developers.neople.co.kr/contents/apiDocs/cyphers 에서 확인해주세요
 * players
   * playerId
