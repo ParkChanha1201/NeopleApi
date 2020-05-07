@@ -3,6 +3,10 @@
 
 ## 다운로드
 http://blogattach.naver.net/26b33a899fc7c21e31dcbd8cbf572654f4a959b573/20200508_22_blogfile/chanhacraft_1588866470167_ZoWNl7_jar/neopleApi-1.0.0.jar
+
+## 필수 라이브러리
+https://repo1.maven.org/maven2/org/json/json/20190722/json-20190722.jar
+
 ## 기능
 1. Neople Developers에서 제공하는 Open Api를 이용하실 수 있습니다.
 1. Open Api에서 제공하는 데이터를 JSONObject로 반환합니다. 현재는 JSONObject를 직접 파싱하셔서 사용하셔야 합니다.
