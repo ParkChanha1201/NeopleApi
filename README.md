@@ -7,6 +7,8 @@ http://blogattach.naver.net/b623aa1964533887ac4c22102fccb1cf683a59/20200508_250_
 ## 필수 라이브러리
 https://repo1.maven.org/maven2/org/json/json/20190722/json-20190722.jar
 
+## 해야할 것
+resources 의 cyphersCharacters.json 파일을 다운로드 받아 src와 같은 위치에 resources 폴더를 만든 후 넣어주세요.
 ## 기능
 1. Neople Developers에서 제공하는 Open Api를 이용하실 수 있습니다.
 1. Open Api에서 제공하는 데이터를 JSONObject로 반환합니다. 현재는 JSONObject를 직접 파싱하셔서 사용하셔야 합니다.
