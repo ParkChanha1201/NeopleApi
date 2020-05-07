@@ -1,7 +1,5 @@
 package aktnf.neopleapi.cyphers.ranking;
 
-import org.json.JSONObject;
-
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
 
@@ -73,11 +71,4 @@ public class CyphersRankingTSJ extends ApiRequestDecorator{
 		
 		return sb.toString();
 	}
-
-	@Override
-	public JSONObject getRawData() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
