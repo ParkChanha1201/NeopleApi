@@ -43,7 +43,7 @@ public class CyphersCharacterIds {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 		
 	}

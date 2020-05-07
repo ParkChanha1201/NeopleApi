@@ -1,5 +1,11 @@
 package aktnf.neopleapi.cyphers;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
 import aktnf.neopleapi.ApiRequester;
 import aktnf.neopleapi.cyphers.battleitem.CyphersBattleitemsRequest;
 import aktnf.neopleapi.cyphers.character.CyphersCharactersRequest;
@@ -11,6 +17,24 @@ import aktnf.neopleapi.cyphers.ranking.CyphersRankingRequest;
 public class CyphersApiRequester extends ApiRequester {
 	public CyphersApiRequester(String apikey) {
 		super(apikey);
+		
+		File cyphersCharacters = new File("./resources/cyphersCharacters.json");
+		
+		try {
+			if(cyphersCharacters.createNewFile()) {
+				BufferedWriter output = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(cyphersCharacters), "UTF-8"));
+				System.out.println(characters().informations().getRawData().toString());
+				
+				output.write(characters().informations().getRawData().toString());
+				output.close();
+			} else {
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	public CyphersPlayersRequest players() {
