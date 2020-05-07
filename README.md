@@ -14,9 +14,10 @@ Open Api에서 제공하는 데이터를 직접 JSON 파싱하지 않고도 사�
 ```Java
   CyphersApiRequester cy = new CyphersApiRequester(apikey);
 ```
-이 때 https://developers.neople.co.kr/main 에서 발급받은 apikey를 매개변수로 넘겨주셔야 합니다.
+  이 때 https://developers.neople.co.kr/main 에서 발급받은 apikey를 매개변수로 넘겨주셔야 합니다.
 
 1. CyphersApiRequester를 사용해 원하는 Request를 생성합니다.
+
 첫 줄까지는 필수 파라미터이므로 반드시 입력해야하고 그 아랫 줄은 선택 사항입니다.
 파라미터에 대한 설명은 https://developers.neople.co.kr/contents/apiDocs/cyphers 에서 확인해주세요
 * players
