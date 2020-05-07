@@ -34,7 +34,7 @@ public class TestApp {
 		String requestURL;
 		ApiRequestDecorator request;
 		
-		request = cy.players().playerId("aaa").wordType(WordType.FULL);
+		request = cy.players().playerId("블레이즈킥").wordType(WordType.MATCH);
 		requestURL = request.getRequestURL();
 		JSONObject rawData = request.getRawData();
 		System.out.println(rawData.toString());
@@ -44,7 +44,7 @@ public class TestApp {
 			System.out.println(player.getGrade() + "\n" + player.getNickname()  + "\n" + player.getPlayerId() + "\n");
 		}
 		
-		request = cy.players().information("aabb1b8abd435a707aec8c995e6cfcb4");
+		request = cy.players().information("d8b89beb4cc1cdff3f0dbd04fae1c74c");
 		requestURL = request.getRequestURL();
 		rawData = request.getRawData();
 		System.out.println(rawData);
@@ -52,10 +52,7 @@ public class TestApp {
 		PlayerInformation playerInformation = cy.players().information("aabb1b8abd435a707aec8c995e6cfcb4").getPlayerInformation();
 		System.out.println(playerInformation);
 
-		
-		
-		request = cy.players().matchRecords("aabb1b8abd435a707aec8c995e6cfcb4").gameTypeId(GameTypeId.NORMAL)
-				.next("6a48416bd03e7ec11f4b00fddce03b4bd383cc72a40cc52818f168f89897ffa566603d485d0161f1e8e86e14dddc9f7bb6a5ebaa7994822cd5777dcee5ae9ab2134f902a36a666401a9e7f5665d452aa");
+		request = cy.players().matchRecords("2ce6f3c16ac508ee26284e421e57fef3").gameTypeId(GameTypeId.RATING);
 		requestURL = request.getRequestURL();
 		rawData = request.getRawData();
 		System.out.println(rawData);
@@ -70,7 +67,7 @@ public class TestApp {
 				.offset(3);
 		requestURL = request.getRequestURL();
 		rawData = request.getRawData();
-		System.out.println(rawData);
+		System.out.println(requestURL);
 		
 		request = cy.ranking().characters(CyphersCharacterName.미쉘, RankingType.EXP);
 		requestURL = request.getRequestURL();

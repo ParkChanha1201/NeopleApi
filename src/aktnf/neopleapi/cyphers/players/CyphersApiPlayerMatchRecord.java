@@ -5,6 +5,7 @@ import java.util.Date;
 
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
+import aktnf.neopleapi.cyphers.matches.MatchRecord;
 
 public class CyphersApiPlayerMatchRecord extends ApiRequestDecorator {
 	private CyphersApiRequest apiRequest;
@@ -95,4 +96,14 @@ public class CyphersApiPlayerMatchRecord extends ApiRequestDecorator {
 
 		return sb.toString();
 	}
+	/***
+	 * getRawData()로부터 가공된 데이터를 가져옵니다
+	 * @return player의 MatchRecord
+	 */
+	public MatchRecord getMatchRecord() {
+		
+		return null;
+	}
+	
+	
 }

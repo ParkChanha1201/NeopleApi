@@ -3,24 +3,19 @@ package aktnf.neopleapi.cyphers.players;
 public class PlayerInformation {
 	private Player player;
 	private String clanName;
-	private int ratingPoint;
-	private int maxRatingPoint;
-	private String tierName;
-	private Record rating;
-	private Record normal;
+	private Rating rating;
+	private Record ratingRecord;
+	private Record normalRecord;
 
 	public PlayerInformation() {
 	}
-	
-	public PlayerInformation(Player player, String clanName, int ratingPoint, int maxRatingPoint, String tierName,
-			Record rating, Record normal) {
+
+	public PlayerInformation(Player player, String clanName, Rating rating, Record ratingRecord, Record normalRecord) {
 		this.player = player;
 		this.clanName = clanName;
-		this.ratingPoint = ratingPoint;
-		this.maxRatingPoint = maxRatingPoint;
-		this.tierName = tierName;
 		this.rating = rating;
-		this.normal = normal;
+		this.ratingRecord = ratingRecord;
+		this.normalRecord = normalRecord;
 	}
 
 	public Player getPlayer() {
@@ -39,43 +34,27 @@ public class PlayerInformation {
 		this.clanName = clanName;
 	}
 
-	public int getRatingPoint() {
-		return ratingPoint;
-	}
-
-	public void setRatingPoint(int ratingPoint) {
-		this.ratingPoint = ratingPoint;
-	}
-
-	public int getMaxRatingPoint() {
-		return maxRatingPoint;
-	}
-
-	public void setMaxRatingPoint(int maxRatingPoint) {
-		this.maxRatingPoint = maxRatingPoint;
-	}
-
-	public String getTierName() {
-		return tierName;
-	}
-
-	public void setTierName(String tierName) {
-		this.tierName = tierName;
-	}
-
-	public Record getRating() {
+	public Rating getRating() {
 		return rating;
 	}
 
-	public void setRating(Record rating) {
+	public void setRating(Rating rating) {
 		this.rating = rating;
 	}
 
-	public Record getNormal() {
-		return normal;
+	public Record getRatingRecord() {
+		return ratingRecord;
 	}
 
-	public void setNormal(Record normal) {
-		this.normal = normal;
+	public void setRatingRecord(Record ratingRecord) {
+		this.ratingRecord = ratingRecord;
+	}
+
+	public Record getNormalRecord() {
+		return normalRecord;
+	}
+
+	public void setNormalRecord(Record normalRecord) {
+		this.normalRecord = normalRecord;
 	}
 }

@@ -27,7 +27,10 @@ public class CyphersApiPlayerInformation extends ApiRequestDecorator {
 
 		return sb.toString();
 	}
-	
+	/***
+	 * getRawData()로부터 가공된 데이터를 가져옵니다
+	 * @return playerId로 검색된 PlayerInformation
+	 */
 	public PlayerInformation getPlayerInformation() {
 		PlayerInformation playerInformation = new PlayerInformation();
 
@@ -38,28 +41,32 @@ public class CyphersApiPlayerInformation extends ApiRequestDecorator {
 		
 		// get player information
 		playerInformation.setClanName(response.isNull("clanName") ? "" : response.getString("clanName"));
-		playerInformation.setRatingPoint(response.isNull("ratingPoint") ? 0 : response.getInt("ratingPoint"));
-		playerInformation.setMaxRatingPoint(response.isNull("maxRatingPoint") ? 0 : response.getInt("maxRatingPoint"));
-		playerInformation.setTierName(response.isNull("tierName") ? "" : response.getString("tierName"));
+		
+		// get Rating
+		Rating rating = new Rating();
+		rating.setMaxRatingPoint(response.isNull("maxRatingPoint") ? 0 : response.getInt("maxRatingPoint"));
+		rating.setRatingPoint(response.isNull("ratingPoint") ? 0 : response.getInt("ratingPoint"));
+		rating.setTierName(response.isNull("tierName") ? "" : response.getString("tierName"));
+		playerInformation.setRating(rating);
 
 		// get match records
 		JSONArray records = response.getJSONArray("records");
-		JSONObject rating = records.getJSONObject(0);
-		JSONObject normal = records.getJSONObject(1);
+		JSONObject jsonRating = records.getJSONObject(0);
+		JSONObject jsonNormal = records.getJSONObject(1);
 
 		Record ratingRecord = new Record("rating");
-		ratingRecord.setWinCount(rating.getInt("winCount"));
-		ratingRecord.setLoseCount(rating.getInt("loseCount"));
-		ratingRecord.setStopCount(rating.getInt("stopCount"));
+		ratingRecord.setWinCount(jsonRating.getInt("winCount"));
+		ratingRecord.setLoseCount(jsonRating.getInt("loseCount"));
+		ratingRecord.setStopCount(jsonRating.getInt("stopCount"));
 
-		playerInformation.setRating(ratingRecord);
+		playerInformation.setRatingRecord(ratingRecord);
 
 		Record normalRecord = new Record("normal");
-		normalRecord.setWinCount(normal.getInt("winCount"));
-		normalRecord.setLoseCount(normal.getInt("loseCount"));
-		normalRecord.setStopCount(normal.getInt("stopCount"));
+		normalRecord.setWinCount(jsonNormal.getInt("winCount"));
+		normalRecord.setLoseCount(jsonNormal.getInt("loseCount"));
+		normalRecord.setStopCount(jsonNormal.getInt("stopCount"));
 
-		playerInformation.setNormal(normalRecord);
+		playerInformation.setNormalRecord(normalRecord);
 		
 		return playerInformation;
 	}
