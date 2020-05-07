@@ -1,7 +1,5 @@
 package aktnf.neopleapi.cyphers.matches;
 
-import org.json.JSONObject;
-
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
 
@@ -25,11 +23,5 @@ public class CyphersMatchDetail extends ApiRequestDecorator{
 		sb.append("?&apikey=" + apikey);
 		
 		return sb.toString();
-	}
-	
-	@Override
-	public JSONObject getRawData() {
-		//TODO: method not implements
-		return null;
 	}
 }

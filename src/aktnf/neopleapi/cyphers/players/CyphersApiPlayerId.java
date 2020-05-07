@@ -3,8 +3,6 @@ package aktnf.neopleapi.cyphers.players;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-import org.json.JSONObject;
-
 import aktnf.neopleapi.WordType;
 import aktnf.neopleapi.apirequest.ApiRequestDecorator;
 import aktnf.neopleapi.cyphers.CyphersApiRequest;
@@ -69,11 +67,5 @@ public class CyphersApiPlayerId extends ApiRequestDecorator{
 		sb.append("&apikey=" + apikey);
 		
 		return sb.toString();
-	}
-	
-	@Override
-	public JSONObject getRawData(){
-		//TODO: method not implements
-		return null;
 	}
 }
