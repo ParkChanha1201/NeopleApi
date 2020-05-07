@@ -19,27 +19,27 @@ Open Api에서 제공하는 데이터를 직접 JSON 파싱하지 않고도 사�
 1. CyphersApiRequester를 사용해 원하는 Request를 생성합니다.
 첫 줄까지는 필수 파라미터이므로 반드시 입력해야하고 그 아랫 줄은 선택 사항입니다.
 파라미터에 대한 설명은 https://developers.neople.co.kr/contents/apiDocs/cyphers 에서 확인해주세요
-  1. players
-    1. playerId
+* players
+  1. playerId
     ```Java
       cy.players().playerId("NICKNAME")
       .wordType(WordType).limit(1);
     ```
-    1. information
+  1. information
     ```Java
       cy.players().information("PLAYER_ID");
     ```
-    1. matchRecords
+  1. matchRecords
     ```Java
       cy.players().matchRecords("PLAYER_ID")
       .gameTypeId(GameTypeId).startDate(Date).endDate(Date).limit(1).next("NEXT_CODE");
     ```
-  1. matches
-    1. detail
+* matches
+  1. detail
     ```Java
       cy.matches().detail("MATCH_ID");
     ```
-  1. ranking
+* ranking
     1. ratingPoint
     ```Java
       cy.ranking().ratingPoint("PLAYER_ID")
@@ -55,27 +55,27 @@ Open Api에서 제공하는 데이터를 직접 JSON 파싱하지 않고도 사�
       cy.ranking().tsj(TSJType)
       .playerId("PLAYER_ID").offset(1).limit(1);
     ```
-  1. battleitems
-    1. search
+* battleitems
+  1. search
     ```Java
       cy.battleitems().search("ITEM_NAME")
       .limit(1).wordType(WordType)
       .characterId("CHARACTER_ID").slotCode("SLOTCODE").rarityCode("RARITYCODE").seasonCode("SEASONCODE");
-    ```
-    1. detail
+      ```
+  1. detail
     ```Java
       cy.battleitems().detail("ITEM_ID");
     ```
-    1. multi
+  1. multi
     ```Java
       cy.battleitems().multi(List<String> ITEM_IDS)
     ```
-  1. characters
+* characters
     1. information
     ```Java
       cy.characters().information();
     ```
-  1. positionAttributes
+* positionAttributes
     1. detail
     ```Java
       cy.positionAttributes().detail("ATTRIBUTE_ID");
