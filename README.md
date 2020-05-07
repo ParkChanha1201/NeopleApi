@@ -87,6 +87,7 @@
     ```
 
 3. 반환받은 ApiRequestDecorator를 이용해 데이터를 요청합니다.
+
 ApiRequestDecorator는 다음과 같은 메서드를 가지고 있습니다.
 ```Java
 public abstract class ApiRequestDecorator {
@@ -94,8 +95,10 @@ public abstract class ApiRequestDecorator {
 	public final JSONObject getRawData();	
 }
 ```
-getRequestURL()은 Api요청을 보내는 URL을 반환합니다.
+getRequestURL()은 Api요청을 보내는 URL을 반환합니다.</br>
 getRawData()는 getRequestURL()로 부터 얻은 URL으로 요청을 보내 응답을 JSONObject로 반환합니다.
+
+* Example
 ```Java
   ApiRequestDecorator request;
   
