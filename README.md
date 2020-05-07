@@ -20,63 +20,63 @@ Open Api에서 제공하는 데이터를 직접 JSON 파싱하지 않고도 사�
 첫 줄까지는 필수 파라미터이므로 반드시 입력해야하고 그 아랫 줄은 선택 사항입니다.
 파라미터에 대한 설명은 https://developers.neople.co.kr/contents/apiDocs/cyphers 에서 확인해주세요
 * players
-  1. playerId
+  * playerId
     ```Java
       cy.players().playerId("NICKNAME")
       .wordType(WordType).limit(1);
     ```
-  1. information
+  * information
     ```Java
       cy.players().information("PLAYER_ID");
     ```
-  1. matchRecords
+  * matchRecords
     ```Java
       cy.players().matchRecords("PLAYER_ID")
       .gameTypeId(GameTypeId).startDate(Date).endDate(Date).limit(1).next("NEXT_CODE");
     ```
 * matches
-  1. detail
+  * detail
     ```Java
       cy.matches().detail("MATCH_ID");
     ```
 * ranking
-    1. ratingPoint
+    * ratingPoint
     ```Java
       cy.ranking().ratingPoint("PLAYER_ID")
       .offset(1).limit(1);
     ```
-    1. characters
+    * characters
     ```Java
       cy.ranking().characters(CyphersCharacterName, RankingType)
       .playerId("PLAYER_ID").offset(1).limit(1);
     ```
-    1. tsj
+    * tsj
     ```Java
       cy.ranking().tsj(TSJType)
       .playerId("PLAYER_ID").offset(1).limit(1);
     ```
 * battleitems
-  1. search
+  * search
     ```Java
       cy.battleitems().search("ITEM_NAME")
       .limit(1).wordType(WordType)
       .characterId("CHARACTER_ID").slotCode("SLOTCODE").rarityCode("RARITYCODE").seasonCode("SEASONCODE");
-      ```
-  1. detail
+    ```
+  * detail
     ```Java
       cy.battleitems().detail("ITEM_ID");
     ```
-  1. multi
+  * multi
     ```Java
       cy.battleitems().multi(List<String> ITEM_IDS)
     ```
 * characters
-    1. information
+    * information
     ```Java
       cy.characters().information();
     ```
 * positionAttributes
-    1. detail
+    * detail
     ```Java
       cy.positionAttributes().detail("ATTRIBUTE_ID");
     ```
