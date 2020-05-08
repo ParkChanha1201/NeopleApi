@@ -2,7 +2,7 @@
 [![NeopleOpenApi](/resources/logo_t1.png)](http://developers.neople.co.kr)
 
 ## 다운로드
-http://blogattach.naver.net/b623aa1964533887ac4c22102fccb1cf683a59/20200508_250_blogfile/chanhacraft_1588872830733_091G8l_jar/neopleApi-1.0.1.jar
+https://blog.naver.com/chanhacraft/221951282354
 
 ## 필수 라이브러리
 https://repo1.maven.org/maven2/org/json/json/20190722/json-20190722.jar
